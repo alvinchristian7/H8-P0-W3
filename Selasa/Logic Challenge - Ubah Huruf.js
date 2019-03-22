@@ -8,12 +8,23 @@ function ubahHuruf(kata) {
       result += " ";
     }
     for (var j = 0; j < liblower.length; j++) {
+      // console.log(j + ". huruf : " + liblower[j])
       if (kata[i] === liblower[j]) {
+        if(j == liblower.length - 1) {
+          result += liblower[0]
+          break
+        }
         result += liblower[j + 1];
+        break;
       }
 
       if (kata[i] === libupper[j]) {
-        result += libupper[j + 1]
+        if(j == libupper.length - 1) {
+          result += libupper[0]
+          break
+        }
+        result += libupper[j + 1];
+        break;
       }
     }
   }

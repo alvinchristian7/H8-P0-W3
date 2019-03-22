@@ -1,7 +1,6 @@
 function highestScore(students) {
   // Code disini
   var tertinggi = {}
-  var maks = 0;
   for (i in students) {
     if (tertinggi[students[i].class] === undefined) tertinggi[students[i].class] = {
       name: students[i].name,

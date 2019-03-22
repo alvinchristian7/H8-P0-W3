@@ -4,18 +4,19 @@ function tukarBesarKecil(kalimat) {
     var libupper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var result = "";
     for (var i = 0; i < kalimat.length; i++) {
-        if (kalimat[i] === " ") {
-            result += " ";
-        }
+        var found = false;
         for (var j = 0; j < liblower.length; j++) {
             if (kalimat[i] === liblower[j]) {
                 result += libupper[j];
+                found = true
             }
 
             if (kalimat[i] === libupper[j]) {
                 result += liblower[j]
+                found = true
             }
         }
+        if(!found) result += kalimat[i]
     }
     return result;
   }
