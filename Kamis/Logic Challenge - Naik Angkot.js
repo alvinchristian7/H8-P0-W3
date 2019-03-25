@@ -5,7 +5,7 @@ function naikAngkot(arrPenumpang) {
     var hasil = [];
 
     for(var i in arrPenumpang) {
-        var a,b;
+        var a, ab;
         for(var j = 0; j < rute.length;j++) {
             if(rute[j] == arrPenumpang[i][1]) a = j;
             if(rute[j] == arrPenumpang[i][2]) b = j;
@@ -21,7 +21,7 @@ function naikAngkot(arrPenumpang) {
   }
   
   //TEST CASE
-  console.log(naikAngkot([['Dimitri', 'F', 'B'], ['Icha', 'A', 'B']]));
+  console.log(naikAngkot([['Dimitri', 'B', 'F'], ['Icha', 'A', 'B']]));
   // [ { penumpang: 'Dimitri', naikDari: 'B', tujuan: 'F', bayar: 8000 },
   //   { penumpang: 'Icha', naikDari: 'A', tujuan: 'B', bayar: 2000 } ]
   
